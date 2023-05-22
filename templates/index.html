@@ -8,6 +8,11 @@
     <title>Django Project</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
+    <h1>
+        welcome ,{{user.username}}
+
+    </h1>
     {% for feature in features %}
         <h1>My name is {{feature.name}}</h1>
    
@@ -15,6 +20,11 @@
 
     
   {% endfor %}
-    
+   <a href="logout">Logout</a>
+    {% else %}
+
+   <h1>Login please.....</h1>
+   <a href="/login">Click here</a>
+   {% endif%}  
 </body>
 </html>

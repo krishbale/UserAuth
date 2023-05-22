@@ -1,0 +1,22 @@
+
+<h1>Loing  Below</h1>
+<style>
+    h5{
+        color:red;
+    }
+</style>
+{% for message in messages%}
+<h5>{{message}}</h5>
+{% endfor %}
+<form action="login" method="post" >
+    {%csrf_token %}
+    <p>UserName</p>
+    <input type="text" name="username"/>
+   
+    <p>Password</p>
+    <input type="text" name="password" />
+    
+    <input type="submit">
+
+
+</form>
