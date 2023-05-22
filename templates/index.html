@@ -8,9 +8,13 @@
     <title>Django Project</title>
 </head>
 <body>
-   <h1>My name is {{feature.name}}</h1>
-   <p> mY id is {{feature.id}}</p>
-   <p> My details is {{feature.details}}</p>
+    {% for feature in features %}
+        <h1>My name is {{feature.name}}</h1>
+   
+        <p> My details is {{feature.details}}</p>
+
+    
+  {% endfor %}
     
 </body>
 </html>
