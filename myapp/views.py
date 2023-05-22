@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Feature
 # Create your views here.
 
 def index(request):
-    context = {
-        'name':'patric',
-        'age':23,
-        'nationality':'British'
-    }
-    return render (request, 'index.html',context)
+    feature1 = Feature()
+    feature1.name = 'Balkrishna'
+    feature1.id = 1
+    feature1.details = 'hello world'
+  
+    return render (request, 'index.html',{'feature':feature1})
